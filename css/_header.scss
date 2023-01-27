@@ -1,0 +1,135 @@
+//header
+header {
+    background-color: $white;
+    height: 77px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1111;
+    .container {
+        gap: 20px;
+        padding: 10px 0;
+        position: relative;
+        .logo {
+            @media (max-width: 500px) {
+                a {
+                    img {
+                        width: 120px;
+                    }
+                }
+            }
+        }
+        nav {
+            background-color: $white;
+            @media (min-width: 922px) {
+                margin-left: auto;
+                display: block !important;
+                ul {
+                    align-items: center;
+                }
+            }
+            @media (max-width: 921px) {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                padding: 10px 20px 20px;
+                border-radius: 0 0 6px 6px;
+                box-shadow: 5px 5px 10px #eee;
+                ul {
+                    flex-direction: column;
+                    li {
+                        a {
+                            &::before {
+                                top: -10px !important;
+                            }
+                        }
+                    }
+                }
+
+            }
+            ul {
+                display: flex;
+                gap: 20px;
+                li {
+                    a {
+                        display: block;
+                        width: fit-content;
+                        font-size: 18px;
+                        font-weight: 400;
+                        color: $pattern-text;
+                        text-transform: capitalize;
+                        position: relative;
+                        &::before {
+                            content: "";
+                            width: 0;
+                            height: 4px;
+                            background-image: $btn-bg;
+                            transition: .4s;
+                            border-radius: 3px;
+                            position: absolute;
+                            left: 0;
+                            top: -20px;
+                        }
+                        &:hover, &.active {
+                            &::before {
+                                width: 100%;
+                            }
+                            color: $blue;
+                        }
+                    }
+                }
+            }
+        }
+        .download {
+            @media (max-width: 921px) {
+                margin-left: auto;
+            }
+        }
+        .toggle-menu {
+            @media (min-width: 922px) {
+                display: none !important;
+            }
+            display: block;
+            width: 30px;
+            height: 25px;
+            position: relative;
+            cursor: pointer;
+            .bar {
+                width: 30px;
+                height: 2px;
+                background-color: $pattern-text;
+                position: absolute;
+                left: 0;
+                transition: .3s;
+                &.bar-1 {
+                    top: 5px;
+                }
+                &.bar-2 {
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+                &.bar-3 {
+                    bottom: 5px;
+                }
+            }
+            &.clicked {
+                .bar {
+                    &.bar-1 {
+                        top: 10px;
+                        transform: rotate(45deg);
+                    }
+                    &.bar-2 {
+                        opacity: 0;
+                    }
+                    &.bar-3 {
+                        bottom: 12px;
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+        }
+    }
+}

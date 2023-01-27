@@ -1,0 +1,52 @@
+// colors
+// button bg 
+$btn-bg: linear-gradient(231.43deg, #7f52f1 10.7%, #5786f1 46.47%, #1dd4f1 86.05%);
+$btn-bg-hover: linear-gradient(-231.43deg, #7f52f1 10.7%, #5786f1 46.47%, #1dd4f1 86.05%);
+$bf-bg: linear-gradient(226.07deg, #7f52f1 14.22%, #5786f1 47.19%, #1dd4f1 83.67%);
+
+
+// price bg and testimonial bg
+$bg-price1: linear-gradient(to right, #BFEBFA, #D7CCFB);
+$form-bg: linear-gradient(to right, #27C7F1, #7558EA);
+$main-bg: rgb(247, 250, 255);
+$footer-bg: #1E1E26;
+$blue: #606EFF;
+$goup-before: rgba(0, 0, 0, 0.05);
+$icon-bg: #35353C;
+$title-c: #3E3F4B;
+$pattern-text: #000000b3;
+$text-c: #00000080;
+$bf-subscribe: rgba(0, 0, 0, 0.05);
+$white: #fff;
+$footer-text: rgba(255,255,255,.7);
+// familt
+$family: 'DM Sans', sans-serif;
+
+//animation
+$main-c: red;
+@keyframes waves {
+    0% {
+        outline-color: rgba($main-c, .8);
+        outline-offset: 1px;
+    }
+    20% {
+        outline-color: rgba($main-c, .7);
+        outline-offset: 3px;
+    }
+    40% {
+        outline-color: rgba($main-c, .5);
+        outline-offset: 6px;
+    }
+    60% {
+        outline-color: rgba($main-c, .3);
+        outline-offset: 9px;
+    }
+    80% {
+        outline-color: rgba($main-c, .1);
+        outline-offset: 12px;
+    }
+    100% {
+        outline-color: rgba($main-c, .001);
+        outline-offset: 15px;
+    }
+}
